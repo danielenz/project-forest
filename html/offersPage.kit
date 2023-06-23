@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forest</title>
+
+    <script
+      src="https://kit.fontawesome.com/0ab53e064e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- @include 'styles.kit' -->
+  </head>
+  <body>
+    <nav class="nav-desktop">
+      <a class="nav-title" onclick="window.location.href='index.html'"
+        ><i class="fa-solid fa-tree" style="color: #414141"></i>Forest</a
+      >
+
+      <div class="nav-links">
+        <a
+          onclick="window.location.href='index.html'"
+          class="nav-link"
+          href="#home"
+          >Home</a
+        >
+        <a class="nav-link" onclick="scrollToSectionAboutus()" href="#aboutUs"
+          >O nas</a
+        >
+        <a class="nav-link navLink-offers" href="#offers" onclick="scrollToSectionOffers()"
+          >Oferta</a
+        >
+        <a
+          class="nav-link contact-link"
+          href="#contact"
+          onclick="window.location.href='contactPage.html'"
+          >Kontakt</a
+        >
+      </div>
+    </nav>
+
+    <nav class="nav-mobile">
+      <button class="burger">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times hide"></i>
+      </button>
+      <ul>
+        <li>
+          <a href="#home" onclick="window.location.href='index.html'">Home</a>
+        </li>
+        <li><a class="navLink-aboutUs" href="#aboutus">O nas</a></li>
+        <li><a class="navLink-offers" href="#offers" onclick="window.location.href='offersPage.html'">Oferta</a></li>
+        <li>
+          <a href="#contact" onclick="window.location.href='contactPage.html' "
+            >Kontakt</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section class="offersPage">
+      <div class="offersPageImg">
+        <div class="offersPageShadow"></div>
+
+        <div class="offersPageCards">
+          <div class="offersPageCard">
+            <div class="offersCardHeader">
+              <div class="card-title">Demo</div>
+              <div class="card-price">
+                <i class="fa-regular fa-dollar-sign" style="color: #000000"></i
+                >0
+              </div>
+              <div class="card-description">
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p class="dncontain">
+                  <i class="fa-solid fa-minus" style="color: #474747"></i> opcja
+                  poza pakietem
+                </p>
+                <p class="dncontain">
+                  <i class="fa-solid fa-minus" style="color: #474747"></i> opcja
+                  poza pakietem
+                </p>
+              </div>
+
+              <button href="#" class="card-button">Wybierz</button>
+            </div>
+          </div>
+
+          <div class="offersPageCard">
+            <div class="offersCardHeader">
+              <div class="card-title">Business</div>
+              <div class="card-price">
+                <i class="fa-regular fa-dollar-sign" style="color: #000000"></i
+                >49
+              </div>
+              <div class="card-description">
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p class="dncontain">
+                  <i class="fa-solid fa-minus" style="color: #474747"></i> opcja
+                  poza pakietem
+                </p>
+                <p class="dncontain">
+                  <i class="fa-solid fa-minus" style="color: #474747"></i> opcja
+                  poza pakietem
+                </p>
+              </div>
+
+              <button href="#" class="card-button">Wybierz</button>
+            </div>
+          </div>
+
+          <div class="offersPageCard favOffers">
+            <div class="offersCardHeader">
+              <div class="card-title">Standard</div>
+              <div class="card-price">
+                <i class="fa-regular fa-dollar-sign" style="color: #000000"></i
+                >99
+              </div>
+              <div class="card-description">
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p class="dncontain">
+                  <i class="fa-solid fa-minus" style="color: #474747"></i> opcja
+                  poza pakietem
+                </p>
+                <p class="dncontain">
+                  <i class="fa-solid fa-minus" style="color: #474747"></i> opcja
+                  poza pakietem
+                </p>
+              </div>
+
+              <button href="#" class="card-button">Wybierz</button>
+            </div>
+          </div>
+
+          <div class="offersPageCard">
+            <div class="offersCardHeader">
+              <div class="card-title">Premium</div>
+              <div class="card-price">
+                <i class="fa-regular fa-dollar-sign" style="color: #000000"></i
+                >299
+              </div>
+              <div class="card-description">
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p class="dncontain">
+                  <i class="fa-solid fa-minus" style="color: #474747"></i> opcja
+                  poza pakietem
+                </p>
+                <p class="dncontain">
+                  <i class="fa-solid fa-minus" style="color: #474747"></i> opcja
+                  poza pakietem
+                </p>
+              </div>
+
+              <button href="#" class="card-button">Wybierz</button>
+            </div>
+          </div>
+
+          <div class="offersPageCard contactOffers">
+            <div class="offersCardHeader">
+              <div class="card-title">Personal</div>
+              <div class="card-price">
+                <i class="fa-regular fa-dollar-sign" style="color: #000000"></i
+                >99
+              </div>
+              <div class="card-description">
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p>
+                  <i class="fa-solid fa-check" style="color: #54e48e"></i> opcja
+                  w pakiecie
+                </p>
+                <p class="dncontain">
+                  <i class="fa-solid fa-minus" style="color: #474747"></i> opcja
+                  poza pakietem
+                </p>
+                <p class="dncontain">
+                  <i class="fa-solid fa-minus" style="color: #474747"></i> opcja
+                  poza pakietem
+                </p>
+              </div>
+
+              <button
+                href="#"
+                class="card-button contactBtn"
+                onclick="window.location.href='contactPage.html'"
+              >
+                Skontakuj się z nami
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- @include 'footer.kit' -->
+    </section>
+
+    
+    
+
+    <script src="dist/js/main.min.js"></script>
+  </body>
+</html>

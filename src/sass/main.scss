@@ -1,0 +1,1134 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.4em;
+  vertical-align: baseline;
+  text-decoration: none;
+  outline: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #333;
+  font-family: "Montserrat", sans-serif;
+}
+
+.active {
+  color: white;
+  background-color: black;
+  max-width: max-content;
+}
+
+// NAWIGACJA
+.nav-desktop {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  font-size: 0;
+  height: 65px;
+  margin-bottom: 65px;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  z-index: 10000;
+  transition: background-color 0.3s ease;
+
+  .fa-tree {
+    font-size: 2rem;
+    color: #333;
+    margin: 5px;
+  }
+
+  .nav-title {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-left: 5px;
+    margin: 1em;
+    padding: 1em;
+    cursor: pointer;
+
+    :visited {
+      color: inherit;
+    }
+  }
+
+  .nav-link {
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1.56em 1.25em;
+  }
+
+  .active {
+    background-color: #000000;
+    color: #fff;
+  }
+}
+
+// KONIEC NAWIGACJI
+
+// NAWIGACJA HAMBURGEROWA
+
+.nav-mobile ul {
+  padding-top: 3.13em;
+  position: absolute;
+  height: 2000px;
+  width: 300px;
+  left: -300px;
+  list-style: none;
+  background-color: rgba(179, 179, 179, 0.9);
+  transition: transform 0.3s;
+  transition: top 0.3s;
+}
+.nav-mobile--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav-mobile a {
+  display: block;
+  padding: 1em 2em;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-mobile a:hover {
+  font-weight: bold;
+}
+
+.burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5em 1em;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #aaaaaa;
+  transition: transform 0.3s;
+}
+
+.visible {
+  transform: translateX(300px);
+}
+
+.hide {
+  display: none;
+}
+
+.backToOriginal {
+  transform: translateX(-300px);
+}
+
+// koniec NAWIGACJI HAMBURGEROWEJ
+
+// HEADER
+header {
+  color: white;
+  justify-content: center;
+
+  h1 {
+    font-size: 2.13rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.38rem;
+  }
+
+  .hero-img {
+    position: relative;
+    min-height: 50vh;
+    height: 60vh;
+    background-image: url(../../dist/img/jungle.min.jpg);
+    background-position: 25% 65%;
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  .hero-shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -10;
+  }
+
+  .hero-text {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+}
+
+// KONIEC HEADERA
+
+// MAIN
+.aboutus {
+  padding-top: 2rem;
+  background-color: white;
+  height: auto;
+  padding-bottom: 2em;
+
+  .aboutus-title {
+    h1 {
+      display: flex;
+      justify-content: center;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 1.9rem;
+      padding: 2.5em;
+    }
+  }
+
+  .aboutus-img {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      min-width: 85%;
+      max-width: 85%;
+    }
+  }
+
+  .text-wrapper {
+    max-width: 49%;
+    padding: 0em 0em 0em 2em;
+
+    h2 {
+      margin: 0em 0em 1em 0em;
+      font-size: 1.4rem;
+    }
+
+    p {
+      margin: 0em;
+      margin-top: 0;
+      line-height: 2;
+      max-width: 80%;
+    }
+  }
+
+  .aboutus-all {
+    display: flex;
+    padding-bottom: 3em;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.adventure {
+  position: relative;
+  height: 45vh;
+  background-image: url(../../dist/img/girl.min.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  .hero-shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-text {
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+
+    h1 {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      margin: 1em 2em;
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+}
+
+.offers {
+  padding-top: 3em;
+  height: auto;
+  background-color: #fff;
+
+  .offers-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5em;
+
+    h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 1.9em;
+    }
+
+    p {
+      text-align: center;
+      margin: 2em;
+      font-size: 1.1rem;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1.5em;
+    font-family: "Montserrat", sans-serif;
+
+    .card {
+      width: 300px;
+      margin: 2em;
+      box-shadow: 0px 1px 5px 2px rgb(0, 0, 0, 0.2);
+      border: 1px solid transparent;
+      transition: 0.3s;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      border: 1px solid #2ade72;
+      transform: scale(1.075);
+    }
+
+    .card-header {
+      padding: 1.2em;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 0.6em;
+    }
+
+    .card-description {
+      display: flex;
+      font-size: 1.1rem;
+      margin: 10px;
+      padding: 0.6em;
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: center;
+      flex-wrap: wrap;
+
+      p {
+        margin: 0.13em;
+      }
+
+      .dncontain {
+        color: #999;
+      }
+    }
+
+    .card-price {
+      font-size: 2rem;
+      font-weight: bold;
+
+      i {
+        margin: 0.2em;
+      }
+    }
+
+    .card-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #ffffff;
+      color: rgb(95, 95, 95);
+      text-align: center;
+      font-size: 1rem;
+      border-radius: 7px;
+      margin: 1.25em 0em;
+      box-shadow: 0px 1px 5px 2px rgb(0, 0, 0, 0.2);
+      font-family: "Montserrat", sans-serif;
+      cursor: pointer;
+    }
+
+    .card-button:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      background-color: #2ade72;
+      color: black;
+    }
+  }
+
+  .more-offers {
+    display: flex;
+    padding: 1.5em 0em 3.5em 0em;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+    .btn-offers {
+      background-color: #fff;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1em;
+      background-color: #8f8f8f;
+      color: white;
+      border: 2px solid whitesmoke;
+      box-shadow: inset 0px 0px 13px 6px rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+      padding: 1.25em;
+      cursor: pointer;
+      transition: background-color 0.5s, color 0.5s, border 0.5s,
+        box-shadow 0.5s;
+    }
+
+    .btn-offers:hover {
+      background-color: whitesmoke;
+      border: 2px solid #838383;
+      color: #747474;
+    }
+
+    .more-text {
+      padding: 1em;
+    }
+  }
+
+  .bounce-top {
+    -webkit-animation: bounce-top 2s ease;
+    animation: bounce-top 2s ease;
+  }
+}
+
+.offersPage {
+  overflow: hidden;
+}
+.offersPageImg {
+  position: relative;
+  background-image: url(../../dist/img/pathway.min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50%;
+  height: auto;
+  overflow: hidden;
+  z-index: 10;
+
+  .offersPageShadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+  }
+
+  .offersPageCards {
+    padding: 3.75em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .offersPageCard {
+    display: flex;
+    margin: 5em;
+    padding: 2.25em;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #f3f3f393;
+    z-index: 1000;
+    transition: 0.3s;
+  }
+
+  .offersPageCard:hover {
+    transform: scale(1.1);
+  }
+
+  .offersCardHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 0.6em;
+    }
+
+    .card-description {
+      display: flex;
+      font-size: 1rem;
+      margin: 0.6em;
+      padding: 0.6em;
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: center;
+      flex-wrap: wrap;
+
+      p {
+        margin: 2px;
+      }
+
+      .dncontain {
+        color: #474747;
+      }
+    }
+
+    .card-price {
+      font-size: 1.4rem;
+      font-weight: bold;
+
+      i {
+        margin: 5px;
+      }
+    }
+
+    .card-button {
+      display: block;
+      width: 100%;
+      padding: 0.6em;
+      background-color: #ffffff;
+      color: rgb(95, 95, 95);
+      text-align: center;
+      font-size: 1rem;
+      border-radius: 7px;
+      margin: 1.25em 0em;
+      box-shadow: 0px 1px 5px 2px rgb(0, 0, 0, 0.2);
+      font-family: "Montserrat", sans-serif;
+      cursor: pointer;
+    }
+
+    .card-button:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      background-color: #2ade72;
+      color: black;
+    }
+
+    .contactBtn:hover {
+      background-color: #1188ce;
+    }
+  }
+
+  .favOffers {
+    border-top: 6px solid #2ade72;
+  }
+
+  .contactOffers {
+    border-top: 6px solid #1188ce;
+  }
+}
+
+// podSTRONA KONTAKT
+
+.contactPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.contact-form {
+  padding: 1.88em;
+  margin: 0 2em;
+  width: 500px;
+  background-color: #fafafa;
+
+  border-radius: 24px;
+  box-shadow: 0px 10px 12px 5px rgb(0, 0, 0, 0.2);
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  margin: 1.25em 0em;
+}
+
+.contact-form label {
+  margin-bottom: 0.63em;
+  font-size: 1.25rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button,
+.contact-form select {
+  padding: 1em;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 2px solid hsl(0, 0%, 67%);
+  border-radius: 12px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form button {
+  padding: 1em;
+  width: 100%;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  color: #fff;
+  background-color: hsl(220, 100%, 50%);
+}
+
+.msg-status {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 3.13em;
+  padding: 1.88em;
+  width: 37.5em;
+  border-radius: 12px;
+  font-size: 1.5rem;
+}
+
+.success {
+  display: flex;
+  background-color: hsl(143, 83%, 55%);
+}
+
+.error {
+  display: flex;
+  background-color: hsl(9, 100%, 64%);
+}
+
+.contact-all {
+  margin-top: 3.13em;
+  padding-bottom: 4.37em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+// TEXT
+.contactUs-text {
+  display: flex;
+  margin: 6.25em 0em 0em 0em;
+  padding: 1em;
+  border-bottom: 1px solid rgb(105, 105, 105);
+  font-family: "Montserrat", sans-serif;
+  color: #636363;
+
+  ::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+// koniec TEXT
+
+//MAPA
+
+.map {
+  display: flex;
+  margin: 0em 6.25em 3.13em;
+  padding: 0.62em;
+  width: 31em;
+  background-color: #fafafa;
+  border: 1px solid rgb(129, 129, 129);
+  border-radius: 24px;
+  box-shadow: 0px 10px 12px 5px rgb(0, 0, 0, 0.2);
+}
+
+// KONIEC MAPY
+
+.contact-map-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: stretch;
+  flex-wrap: wrap;
+}
+
+// KONTAKT BOX
+.tma-box {
+  display: flex;
+  margin: 0em 0em 2em;
+  padding: 1.25em;
+  width: 31.25em;
+  background-color: #fafafa;
+  border-radius: 24px;
+  box-shadow: 0px 10px 12px 5px rgb(0, 0, 0, 0.2);
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+
+  .tel,
+  .mail,
+  .address {
+    padding: 0.62em;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;
+
+    i {
+      padding: 0.62em;
+    }
+  }
+}
+
+// KONIEC KONTAKT BOX
+
+// KONIEC STRONY KONTAKT
+
+// KONIEC MAINA
+
+// FOOTER
+.footer-container {
+  height: 49vh;
+  top: 10px;
+  position: relative;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  margin-top: auto;
+  width: 100%;
+
+  display: flex;
+  height: 45vh;
+  padding-top: 2em;
+  padding-bottom: 2.5em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  background-color: #f5f5f5;
+
+  .footer-logo {
+    p {
+      font-weight: 400;
+      font-size: 2.6em;
+    }
+  }
+
+  .footer-all {
+    margin: 0 0 1.25em 0;
+    display: flex;
+  }
+
+  .footer-aboutus,
+  .footer-company,
+  .footer-doc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1em;
+
+    p {
+      font-weight: 600;
+      font-size: 1.3em;
+    }
+
+    a {
+      margin: 0.62em 0;
+      text-decoration: none;
+      color: #555555;
+      font-size: 0.8em;
+    }
+  }
+}
+
+.footer-hr {
+  position: absolute;
+  bottom: 4.37em;
+  margin-top: 3.12em;
+  height: 1px;
+  width: 100%;
+  background-color: #838383;
+}
+
+.footer-words {
+  position: absolute;
+  bottom: 0;
+  padding: 1.56em;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8em;
+  color: #555555;
+  background-color: #f5f5f5;
+}
+
+// KONIEC FOOTER
+
+@media only screen and (max-width: 768px) {
+  .nav-mobile {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  header {
+
+    h1{
+      font-size: 1.7rem;
+    }
+  }
+  .header .hero-text {
+    display: flex;
+    padding: 1em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .aboutus .aboutus-all {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .aboutus .text-wrapper {
+    display: flex;
+    padding: 0em 2em;
+    max-width: 70%;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .aboutus .text-wrapper h2 {
+    display: flex;
+    justify-content: center;
+  }
+  .aboutus .text-wrapper p {
+    max-width: 100%;
+  }
+  .aboutus .aboutus-img {
+    display: flex;
+    justify-content: center;
+  }
+  .aboutus .aboutus-img img {
+    padding: 1em;
+    max-width: 80%;
+    height: auto;
+    display: block;
+  }
+  .adventure .hero-text {
+    display: flex;
+    justify-content: center;
+  }
+
+  .adventure .hero-text h1 {
+    text-align: center;
+    margin: 1.25em 2em;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .footer-container {
+    height: 65vh;
+    top: 10px;
+  }
+  footer {
+    height: 60vh;
+  }
+
+  footer .footer-logo p {
+    padding: 1.25em 0;
+  }
+
+  .offers .more-offers .more-text {
+    padding: 1em;
+    text-align: center;
+  }
+
+  .map {
+    max-width: 31em;
+  }
+
+  .offersPageImg .offersPageCard{
+    transform: scale(0.9);
+    margin: 0em;
+    padding: 1.25em;
+  }
+  .offersPageImg .offersPageCard:hover{
+      transform: scale(1);
+    }
+  
+
+  @media only screen and (max-width: 600px) {
+    .tma-box {
+      max-width: 25em;
+
+      p {
+        text-align: center;
+      }
+    }
+    .map {
+      max-width: 25em;
+    }
+
+    .contact-form {
+      max-width: 25em;
+    }
+
+    .adventure .hero-text h1 {
+      text-align: center;
+      margin: 1.25em 2em;
+      font-size: 20px;
+      color: #fff;
+    }
+    .offersPageImg .offersPageCard{
+      transform: scale(1);
+      margin: .5em;
+      padding: 1.25em;
+    }
+    .offersPageImg .offersPageCard:hover{
+        transform: scale(1.05);
+      }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .tma-box {
+      max-width: 18.75em;
+
+      p {
+        text-align: center;
+      }
+    }
+    .map {
+      max-width: 10.62em;
+    }
+
+    .contact-form {
+      max-width: 16.25em;
+    }
+
+    footer .footer-all {
+      margin: 0 0 1.25em;
+      display: flex;
+      text-align: center;
+    }
+
+    .offersPageImg .offersPageCard{
+      transform: scale(0.9);
+      margin: 0em;
+      padding: 1.25em;
+    }
+    .offersPageImg .offersPageCard:hover{
+        transform: scale(0.95);
+      }
+  }
+
+  @media only screen and (max-width: 320px) {
+    .tma-box {
+      max-width: 9em;
+
+      p {
+        text-align: center;
+      }
+    }
+    .map {
+      display: none;
+    }
+
+    .contact-form {
+      max-width: 9em;
+    }
+
+    .adventure .hero-text h1 {
+      text-align: center;
+      margin: 1.25em 2em;
+      font-size: 1.25rem;
+      color: #fff;
+    }
+
+    .footer-container{
+      height: 55vh;
+    }
+
+    footer {
+      padding: 0em 0.5em;
+      width: auto;
+
+      .footer-doc,
+      .footer-company,
+      .footer-aboutus {
+        p {
+          font-weight: 600;
+          font-size: 0.8em;
+        }
+
+        a{
+          font-size: 0.6em;
+        }
+      }
+    }
+
+    .offersPageImg .offersPageCard{
+      transform: scale(.7);
+      padding: .5em;
+    }
+    .offersPageImg .offersPageCard:hover{
+        transform: scale(1.05);
+      }
+  }
+
+  // KONIEC MEDIA QUERIES
+
+  @-webkit-keyframes bounce-top {
+    0% {
+      -webkit-transform: translateY(-45px);
+      transform: translateY(-45px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 1;
+    }
+
+    24% {
+      opacity: 1;
+    }
+
+    40% {
+      -webkit-transform: translateY(-24px);
+      transform: translateY(-24px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    65% {
+      -webkit-transform: translateY(-12px);
+      transform: translateY(-12px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    82% {
+      -webkit-transform: translateY(-6px);
+      transform: translateY(-6px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    93% {
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    25%,
+    55%,
+    75%,
+    87% {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+
+    100% {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounce-top {
+    0% {
+      -webkit-transform: translateY(-45px);
+      transform: translateY(-45px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 1;
+    }
+
+    24% {
+      opacity: 1;
+    }
+
+    40% {
+      -webkit-transform: translateY(-24px);
+      transform: translateY(-24px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    65% {
+      -webkit-transform: translateY(-12px);
+      transform: translateY(-12px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    82% {
+      -webkit-transform: translateY(-6px);
+      transform: translateY(-6px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    93% {
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    25%,
+    55%,
+    75%,
+    87% {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+
+    100% {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      opacity: 1;
+    }
+  }
+}
